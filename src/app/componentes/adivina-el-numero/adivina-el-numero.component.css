@@ -68,6 +68,9 @@ span.psw {
     }
 }
 
+#game-wrapper {
+    border-radius: 15px;
+}
 
 
 #snackbar {

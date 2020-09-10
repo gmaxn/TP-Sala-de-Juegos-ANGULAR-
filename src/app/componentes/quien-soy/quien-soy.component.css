@@ -25,7 +25,12 @@ p {font-size: 16px;}
     background-color: #2f2f2f; /* Black Gray */
     color: #fff;
 }
-.container-fluid {
+.navbar{margin-bottom: 0px !important}
+
+#quienSoyImg {
+    border-radius: 20px;
+}
+/* .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
 }
@@ -40,4 +45,4 @@ p {font-size: 16px;}
 }
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
-}
+} */
