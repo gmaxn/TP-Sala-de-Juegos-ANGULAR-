@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+#game-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, 25%);
+    background-color:rgb(62, 45, 95);
+    
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#agilidad-form {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    width: 700px;
+}
+
+#agilidad-form-label {
+    display: block;
+    width: 100%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 24px;
+    color: rgb(229, 229, 16);
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
+}
+
+#agilidad-value-1 {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#agilidad-value-2 {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#agilidad-operator {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+#agilidad-operator>input {
+    width: 45px;
+}
+
+#agilidad-timer {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+#agilidad-timer>input {
+    width: 45px;
+}
+
+
+
+#agilidad-result {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#agilidad-result>input {
+    width: 100px;
+}
+
+#submit {
+    margin-top:20px;
+}
