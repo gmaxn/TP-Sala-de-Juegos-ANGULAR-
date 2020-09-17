@@ -1,0 +1,113 @@
+header {
+  /**** layout ****/
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+  /**** style ****/
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 2px;
+  background-color: rgb(52, 58, 64);
+
+  /**** content behavior ****/
+  text-align: center;
+  color: whitesmoke;
+  font-family: consolas;
+}
+
+aside {
+  /**** layout ****/
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  /**** style ****/
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 2px;
+  background-color: rgb(52, 58, 64);
+
+  /**** content behavior ****/
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: flex-start; */
+  color: whitesmoke;
+  font-family: consolas;
+}
+
+footer {
+  /**** layout ****/
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  /**** style ****/
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 2px;
+
+  /**** content behavior ****/
+  background-color: rgb(52, 58, 64);
+  font-family: consolas;
+  text-align: center;
+  color: whitesmoke;
+  vertical-align: center;
+}
+
+article {
+  /**** layout ****/
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  overflow-x: auto;
+  overflow-y: auto;
+
+  /**** style ****/
+  border: 2px solid black;
+  margin: 2px;
+  border-radius: 5px;
+  
+  /**** content behavior ****/
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* overflow: hidden; */
+  /* padding-left: 5px;
+  padding-top: 5px; */
+  /* padding-right: 0px;
+  padding-bottom: 5px; */
+  background: url("src/assets/images/whatsapp_background.jpg");
+}
+
+article::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+article::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+
+article::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+/******************************************************/
+.grid-wrapper {
+  display: grid;
+  grid-template-rows: 7% auto 15%;
+  grid-template-columns: 15% auto;
+  border: 2px solid blue;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-around;
+  /* overflow: hidden; */
+}
