@@ -1,0 +1,26 @@
+[
+  {
+    "name": "gorila",
+    "letters": ["g", "o", "r", "i", "l", "a"]
+  },
+  {
+    "name": "gato",
+    "letters": ["g", "a", "t", "o"]
+  },
+  {
+    "name": "dog",
+    "letters": ["p", "e", "r", "r", "o"]
+  },
+  {
+    "name": "pajaro",
+    "letters": ["p", "a", "j", "a", "r", "o"]
+  },
+  {
+    "name": "jirafa",
+    "letters": ["j", "i", "r", "a", "f", "a"]
+  },
+  {
+    "name": "rinoceronte",
+    "letters": ["r", "i", "n", "o", "c", "e", "r", "o", "n", "t", "e"]
+  }
+]

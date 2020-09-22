@@ -16,7 +16,7 @@ export abstract class Juego {
         this.jugador = "natalia natalia";
     }
     
-    public abstract verificar(): boolean;
+    public abstract verificar(respuesta?:any): boolean;
 
     public retornarAyuda() {
 

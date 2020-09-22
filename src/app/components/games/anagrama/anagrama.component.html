@@ -1,0 +1,18 @@
+<style>
+
+</style>
+<div id="game-wrapper">
+    <div id="anagrama-form">
+        <div id="anagrama-set-wrapper" >
+            <span *ngFor="let word of shatteredletters">{{word}}</span>
+        </div>
+        <app-timer [miliseconds]="timerDuration"></app-timer>
+        <div id="anagrama-input">
+            <input type="text" name="" id="" class="form-control" style="flex:2;margin-right: 5px;" [disabled]="!inputEnabled" [(ngModel)]="inputText">
+            <button class="btn btn-primary" (click)="onNewGame()" *ngIf="btnEnabled">Nuevo Juego</button>
+            <input *ngIf="btnAdivinar" id="submit" class="btn btn-success" type="button" value="Adivinar" name="new-game" (click)='onVerificar()'>
+
+        </div>
+
+    </div>
+</div>

@@ -1,16 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './layout-components/navbar/navbar.component';
-import { AsidenavComponent } from './layout-components/asidenav/asidenav.component';
-import { GamesComponent } from './layout-components/games/games.component';
-import { AgilidadAritmeticaComponent } from './agilidad-aritmetica/agilidad-aritmetica.component';
 import { FormsModule } from '@angular/forms';
-import { PiedraPapelTijeraComponent } from './piedra-papel-tijera/piedra-papel-tijera.component';
-import { AdivinaElNumeroComponent } from './adivina-el-numero/adivina-el-numero.component';
-import { AboutMeComponent } from './about-me/about-me.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+import { NavbarComponent } from './components/layout/navbar/navbar.component';
+import { AsidenavComponent } from './components/layout/asidenav/asidenav.component';
+
+import { AboutMeComponent } from './components/panels/about-me/about-me.component';
+import { GamesComponent } from './components/panels/games/games.component';
+
+import { AgilidadAritmeticaComponent } from './components/games/agilidad-aritmetica/agilidad-aritmetica.component';
+import { PiedraPapelTijeraComponent } from './components/games/piedra-papel-tijera/piedra-papel-tijera.component';
+import { AdivinaElNumeroComponent } from './components/games/adivina-el-numero/adivina-el-numero.component';
+import { AnagramaComponent } from './components/games/anagrama/anagrama.component';
+import { TimerComponent } from './components/games/timer/timer.component';
+import { TetrisComponent } from './components/games/tetris/tetris.component';
+import { environment } from 'src/environments/environment';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { LoginComponent } from './components/panels/login/login.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,12 +36,21 @@ import { AboutMeComponent } from './about-me/about-me.component';
     AgilidadAritmeticaComponent,
     PiedraPapelTijeraComponent,
     AdivinaElNumeroComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    AnagramaComponent,
+    TimerComponent,
+    TetrisComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
