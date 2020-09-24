@@ -12,7 +12,7 @@
         </div>
         <div class="input-text-control" id="vehicle-price">
             <label class="mr-sm-2">Password:</label>
-            <input placeholder="Repeat password . . ." class="form-control mb-2 mr-sm-2" [(ngModel)]="clave" name="psw" required>
+            <input placeholder="Repeat password . . ." type="password" class="form-control mb-2 mr-sm-2" [(ngModel)]="clave" name="psw" required>
         </div>
         <div *ngIf="!logeando" class="progress">
             <div class="progress-bar progress-bar-info progress-bar-striped active" [class]="clase" role="progressbar"

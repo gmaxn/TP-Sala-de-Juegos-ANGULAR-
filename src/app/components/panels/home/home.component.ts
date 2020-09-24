@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  username:string = "User2020";
+  username:string;
   password:string;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+    let user = JSON.parse(localStorage.getItem('usuario'));
+
+    this.username = user.email;
+  }
 }

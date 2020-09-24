@@ -4,7 +4,7 @@
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */html{-webkit-tap-highlight-color:rgba(0,0,0,0)}.custom-range:focus{outline:none}*{margin:0;padding:0}html{border:2px solid red;border-radius:5px}body,html{height:100%;padding:2px}body{border:2px solid green;border-radius:5px}
+ */html{-webkit-tap-highlight-color:rgba(0,0,0,0)}.custom-range:focus{outline:none}*{margin:0;padding:0}body,html{height:100%}
 
 /*!
  * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
