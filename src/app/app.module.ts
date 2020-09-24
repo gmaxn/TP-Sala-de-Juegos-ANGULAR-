@@ -27,6 +27,7 @@ import { LoginComponent } from './components/panels/login/login.component';
 import { HomeComponent } from './components/panels/home/home.component';
 import { ErrorComponent } from './components/panels/error/error.component';
 import { RegisterComponent } from './components/panels/register/register.component';
+import { WelcomeComponent } from './components/panels/welcome/welcome.component';
 
 
 
@@ -46,7 +47,8 @@ import { RegisterComponent } from './components/panels/register/register.compone
     LoginComponent,
     HomeComponent,
     ErrorComponent,
-    RegisterComponent
+    RegisterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

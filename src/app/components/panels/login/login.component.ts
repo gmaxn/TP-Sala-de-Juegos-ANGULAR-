@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
 
       }).then(docRef => {
           localStorage.setItem('usuario', JSON.stringify(usuario));
-          this.router.navigate(['home']);
+          this.router.navigate(['welcome']);
           console.log('Document written with ID: ', docRef.id);
         }).catch(error => {
           console.error('Error adding document: ', error);

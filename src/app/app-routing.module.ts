@@ -14,13 +14,16 @@ import { LoginComponent } from './components/panels/login/login.component';
 import { ErrorComponent } from './components/panels/error/error.component';
 import { RegisterComponent } from './components/panels/register/register.component';
 import { HomeComponent } from './components/panels/home/home.component';
+import { WelcomeComponent } from './components/panels/welcome/welcome.component';
 
 const routes: Routes = [
   // {path: 'login', component: LoginComponent},
   // {path: 'calc', component: CalcComponent },
   // {path: 'calc', component: CalcComponent },
   // {path: 'countries', component: CountriesListComponent},
-  // {path: '', component: WelcomeComponent},
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'welcome', component: WelcomeComponent },
   { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },
   { path: 'adivina-el-numero', component: AdivinaElNumeroComponent },
   { path: 'games', component: GamesComponent },
@@ -29,7 +32,6 @@ const routes: Routes = [
   { path: 'anagrama', component: AnagramaComponent },
   { path: 'tetris', component: TetrisComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'error', component: ErrorComponent },
   { path: 'register', component: RegisterComponent },
