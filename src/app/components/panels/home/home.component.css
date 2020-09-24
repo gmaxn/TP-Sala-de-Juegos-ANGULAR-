@@ -1,0 +1,14 @@
+.welcome-wrapper {
+    border: 1px solid black;
+    border-style: dashed;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    margin: 25px;
+    background-color: rgb(229,221,213);
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}

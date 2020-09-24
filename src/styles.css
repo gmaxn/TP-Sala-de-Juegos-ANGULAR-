@@ -6,16 +6,16 @@
   padding: 0px;
 }
 html {
-  border: 2px solid red;
-  border-radius: 5px;
+  /* border: 2px solid red; */
+  /* border-radius: 5px; */
   height: 100%;
-  padding: 2px;
+  /* padding: 2px; */
 }
 body {
-  border: 2px solid green;
-  border-radius: 5px;
+  /* border: 2px solid green; */
+  /* border-radius: 5px; */
   height: 100%;
-  padding: 2px;
+  /* padding: 2px; */
 } 
 
 /************************************/

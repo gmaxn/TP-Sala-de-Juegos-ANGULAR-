@@ -1,0 +1,19 @@
+.error-wrapper {
+    border: 1px solid black;
+    border-style: dashed;
+    border-radius: 5px;
+    padding: 5px;
+    width:70%;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+}
+
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}

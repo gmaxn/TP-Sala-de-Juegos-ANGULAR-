@@ -11,6 +11,9 @@ import { TetrisComponent } from './components/games/tetris/tetris.component';
 import { AboutMeComponent } from './components/panels/about-me/about-me.component';
 import { GamesComponent } from './components/panels/games/games.component';
 import { LoginComponent } from './components/panels/login/login.component';
+import { ErrorComponent } from './components/panels/error/error.component';
+import { RegisterComponent } from './components/panels/register/register.component';
+import { HomeComponent } from './components/panels/home/home.component';
 
 const routes: Routes = [
   // {path: 'login', component: LoginComponent},
@@ -18,15 +21,20 @@ const routes: Routes = [
   // {path: 'calc', component: CalcComponent },
   // {path: 'countries', component: CountriesListComponent},
   // {path: '', component: WelcomeComponent},
-  {path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent},
-  {path: 'adivina-el-numero', component: AdivinaElNumeroComponent},
-  {path: 'games', component: GamesComponent},
-  {path: 'agilidad-aritmetica', component: AgilidadAritmeticaComponent},
-  {path: 'about-me', component: AboutMeComponent},
-  {path: 'anagrama', component: AnagramaComponent},
-  {path: 'tetris', component: TetrisComponent},
-  {path: 'login', component: LoginComponent},
-  // {path: '**', component: ErrorComponent}
+  { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },
+  { path: 'adivina-el-numero', component: AdivinaElNumeroComponent },
+  { path: 'games', component: GamesComponent },
+  { path: 'agilidad-aritmetica', component: AgilidadAritmeticaComponent },
+  { path: 'about-me', component: AboutMeComponent },
+  { path: 'anagrama', component: AnagramaComponent },
+  { path: 'tetris', component: TetrisComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'error', component: ErrorComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '**', component: ErrorComponent }
+
 ];
 
 @NgModule({

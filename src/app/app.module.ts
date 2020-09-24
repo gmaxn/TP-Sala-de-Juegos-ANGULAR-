@@ -24,6 +24,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { LoginComponent } from './components/panels/login/login.component';
+import { HomeComponent } from './components/panels/home/home.component';
+import { ErrorComponent } from './components/panels/error/error.component';
+import { RegisterComponent } from './components/panels/register/register.component';
 
 
 
@@ -40,7 +43,10 @@ import { LoginComponent } from './components/panels/login/login.component';
     AnagramaComponent,
     TimerComponent,
     TetrisComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    ErrorComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

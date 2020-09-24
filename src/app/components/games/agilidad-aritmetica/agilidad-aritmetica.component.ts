@@ -45,7 +45,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
         clearInterval(this.repetidor);
         this.ocultarVerificar = true;
         this.timer = 10;
-        alert('Perdiste no podes comprar mas dolares');
+        alert('Perdiste');
 
       }
     }, 900);
@@ -57,7 +57,7 @@ export class AgilidadAritmeticaComponent implements OnInit {
     this.juego.respuesta = respuesta;
 
     if(this.juego.verificar()){
-      alert('Felicitaciones te ganaste un cepo');
+      alert('Felicitaciones ganaste');
     }
     else {
       alert(this.juego.retornarAyuda());

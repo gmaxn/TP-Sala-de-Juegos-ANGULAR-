@@ -116,3 +116,307 @@
 #submit {
     margin-top:20px;
 }
+
+form {
+    border: 10px solid #f1f1f1;
+    padding: 10px;
+    background: gray;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.aceptbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #3664F4;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+.forms-buttons-container {
+    border: 1px dashed white;
+    ;
+    border-radius: 5px;
+    margin: 25px 5px 5px;
+}
+
+
+
+.button-submit {}
+
+.button-clear {}
+
+.button-exit {
+    background-color: red;
+}
+
+
+/********************************/
+
+
+.input-text-control {
+margin: 0;
+padding: 0;
+width:100%;
+display: flex;
+flex-direction: column;
+}
+.input-text-control>label {
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;   
+}
+.input-text-control>input {
+font-family: 'Permanent Marker', cursive; 
+color: black;
+}
+.input-text-control>input[disabled] {
+color: rgb(108, 117, 125);
+padding: 2px;
+margin: 0 0 0 0;
+background-image: none;
+}
+.mr-sm-2 {
+font-family: 'Permanent Marker', cursive;
+color: rgb(255, 255, 255); 
+}
+.input-date-control {
+margin: 0;
+padding: 0;
+width:100%;
+display: flex;
+flex-direction: column;
+}
+.input-radio-control {
+margin: 0;
+padding: 0;
+width:100%;
+display: flex;
+flex-direction: column;
+align-items: baseline;
+justify-content: space-around;
+}
+.input-radio-control>.radio-wrapper {
+width:100%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: baseline;
+}
+.input-radio-control>.radio-wrapper>div {
+display: flex;
+flex-direction: row;
+align-items: baseline;
+justify-content: center;
+margin-left: 5%;
+margin-right: 5%;
+}
+input[type="radio"] {
+transform: translate(0 , 20%);
+margin-left: 5px;
+}
+.is-invalid-radio {
+position: relative;
+animation: shake .1s linear;
+animation-iteration-count: 3;
+outline: 1px solid red;
+
+}
+.is-invalid {
+position: relative;
+animation: shake .1s linear;
+animation-iteration-count: 3;
+}
+
+@keyframes shake {
+0% {
+  left: -5px;
+}
+100% {
+  right: -5px;
+}
+}
+
+/********************************/
+
+#create-form-wrapper {
+
+display: flex;
+
+
+height: 100%;
+
+
+
+/* position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% , -50%); */
+
+animation:spin 0.5s ease-in;
+/*
+height: 100%;
+width: 100%;
+position: fixed;
+border: 1px solid blue;*/
+
+
+}
+#create-form {
+
+
+display: inline-flex;
+flex-direction: column;
+margin: auto;
+background-color:rgb(62, 45, 95);
+
+
+border-radius: 15px;
+border: 3px solid black;
+padding: 20px;
+
+}
+
+
+
+@keyframes spin {
+
+0% {	
+    transform: translate(0% , 0%) scale(0) rotateZ(360deg); 
+}
+100% {	
+    transform: translate(0% , 0%) scale(1) rotateZ(-360deg); 
+}
+}
+
+@keyframes rocket {
+
+0% {	
+    transform: translate(-50% , -50%); 
+}
+50% {
+    transform: translate(-50% , -25%);
+}
+100% {	
+    transform: translate(-50%, -800%); 
+}
+}
+
+@keyframes shake {
+10%, 90% {
+transform: translate3d(-1px, 0, 0);
+}
+
+20%, 80% {
+transform: translate3d(2px, 0, 0);
+}
+
+30%, 50%, 70% {
+transform: translate3d(-5px, 0, 0);
+}
+
+40%, 60% {
+transform: translate3d(5px, 0, 0);
+}
+}
+
+
+.create-form-rocket {
+
+float: left;
+position: sticky;
+top: 50%;
+left: 50%;
+transform: translate(-50% , -50%);
+animation: rocket 0.5s ease-out;
+
+}
+
+.form-title {
+font-family: 'Permanent Marker', cursive;
+font-size: 24px;
+color: rgb(229,229,16);
+text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+/*border: 1px solid black;*/
+}
+.form-label {
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+
+
+.form-input-text {
+padding: 5px;
+
+}
+
+.btn-group {
+font-family: 'Permanent Marker', cursive;
+margin-top: 6%;
+color: rgb(30, 30, 30);
+}
+
+
+
+.form-buttons {
+
+
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}

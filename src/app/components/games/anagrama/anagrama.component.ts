@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { IWord } from 'src/app/models/dictionary';
+import { IUser } from 'src/app/models/user';
 import { DictionaryService } from 'src/app/services/dictionary.service';
 import { TimerObservableServiceService } from 'src/app/services/timer-observable-service.service';
 import { Anagrama } from '../../../classes/anagrama';
@@ -24,8 +26,17 @@ export class AnagramaComponent implements OnInit {
   inputText:string = '';
   isRunning: boolean = false;
 
-  constructor(private dicService: DictionaryService, private observable: TimerObservableServiceService) {
-    this.game = new Anagrama();
+  user:any;
+
+  constructor(
+    private dicService: DictionaryService, 
+    private observable: TimerObservableServiceService,
+    private db: AngularFirestore) {
+
+    this.user = JSON.parse(localStorage.getItem('usuario'));
+
+    console.log(this.user)
+    this.game = new Anagrama('Anagrama', false, (<IUser>this.user).email);
   }
 
   ngOnInit(): void {
