@@ -15,6 +15,7 @@ import { ErrorComponent } from './components/panels/error/error.component';
 import { RegisterComponent } from './components/panels/register/register.component';
 import { HomeComponent } from './components/panels/home/home.component';
 import { WelcomeComponent } from './components/panels/welcome/welcome.component';
+import { ContactsComponent } from './components/panels/contacts/contacts.component';
 
 const routes: Routes = [
   // {path: 'login', component: LoginComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   // {path: 'calc', component: CalcComponent },
   // {path: 'countries', component: CountriesListComponent},
   { path: '', component: HomeComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent },

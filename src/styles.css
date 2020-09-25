@@ -6,16 +6,19 @@
   padding: 0px;
 }
 html {
-  /* border: 2px solid red; */
+  /* border: 2px solid red;  */
   /* border-radius: 5px; */
   height: 100%;
   /* padding: 2px; */
+  background-color: black;
+
 }
 body {
   /* border: 2px solid green; */
   /* border-radius: 5px; */
   height: 100%;
   /* padding: 2px; */
+  background-color: black;
 } 
 
 /************************************/
