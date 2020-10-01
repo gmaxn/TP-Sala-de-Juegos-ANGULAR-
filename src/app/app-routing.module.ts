@@ -16,6 +16,8 @@ import { RegisterComponent } from './components/panels/register/register.compone
 import { HomeComponent } from './components/panels/home/home.component';
 import { WelcomeComponent } from './components/panels/welcome/welcome.component';
 import { ContactsComponent } from './components/panels/contacts/contacts.component';
+import { MemotestComponent } from './components/games/memotest/memotest.component';
+import { RecordsComponent } from './components/panels/records/records.component';
 
 const routes: Routes = [
   // {path: 'login', component: LoginComponent},
@@ -23,6 +25,7 @@ const routes: Routes = [
   // {path: 'calc', component: CalcComponent },
   // {path: 'countries', component: CountriesListComponent},
   { path: '', component: HomeComponent },
+  { path: 'memotest', component: MemotestComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent },
@@ -37,6 +40,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'error', component: ErrorComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'records', component: RecordsComponent },
   { path: '**', component: ErrorComponent }
 
 ];

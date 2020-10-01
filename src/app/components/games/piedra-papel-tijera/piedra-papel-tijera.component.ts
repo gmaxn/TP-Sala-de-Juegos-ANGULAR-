@@ -1,5 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { IRecord } from 'src/app/models/record';
+import { IUser } from 'src/app/models/user';
+import { RecordsService } from 'src/app/services/records.service';
 import { Ppt } from '../../../classes/ppt';
 
 @Component({
@@ -8,6 +11,11 @@ import { Ppt } from '../../../classes/ppt';
   styleUrls: ['./piedra-papel-tijera.component.css']
 })
 export class PiedraPapelTijeraComponent implements OnInit {
+  
+  private currentUser:IUser;
+  private records:IRecord[];
+  private errorMessage: string;
+
 
   @Output()
   enviarJuego: EventEmitter<any>;
@@ -26,7 +34,7 @@ export class PiedraPapelTijeraComponent implements OnInit {
   hide3: boolean = false;
   newGame: boolean = false;
 
-  constructor() {
+  constructor(private recordService: RecordsService) {
 
     this.showTimer = false;
     this.timer = 3;
@@ -34,12 +42,24 @@ export class PiedraPapelTijeraComponent implements OnInit {
     this.juego = new Ppt();
     this.enviarJuego = new EventEmitter<any>();
     this.cardImageUrl = "./../../assets/images/card-back.jpg";
-
+    this.currentUser = JSON.parse(localStorage.getItem('usuario'));
 
 
   }
 
   ngOnInit(): void {
+
+    this.currentUser = JSON.parse(localStorage.getItem('usuario'));
+
+    console.log(this.currentUser);
+
+    this.recordService.getRecordsObservable().subscribe({
+
+      next: records => {
+        this.records = records;
+      },
+      error: err => this.errorMessage = err
+    });
   }
 
   NuevoJuego() {
@@ -61,7 +81,7 @@ export class PiedraPapelTijeraComponent implements OnInit {
         clearInterval(this.repetidor);
         this.ocultarVerificar = true;
         this.timer = 3;
-        alert('Perdiste no podes comprar mas dolares');
+        alert('Mala suerte, segui participando...');
 
       }
     }, 900);
@@ -79,14 +99,40 @@ export class PiedraPapelTijeraComponent implements OnInit {
   verificar(respuesta: string) {
 
 
-    console.log('res' + respuesta);
     this.ocultarVerificar = false;
     this.showTimer = false;
     //clearInterval(this.repetidor);
     this.juego.userSelection = respuesta;
 
     if (this.juego.verificar()) {
-      alert('Felicitaciones te ganaste un cepo');
+      alert('Felicitaciones te ganaste!!!');
+
+      if(this.currentUser) {
+
+        let existRecord: IRecord = null;
+
+        for(let i = 0; i<this.records.length; i++) {
+          if(this.records[i].username === this.currentUser.email && this.records[i].game === "piedra-papel-tijera") {
+            console.log(this.records[i].docRefId);
+            this.records[i].points += 10;
+            existRecord = this.records[i];
+          }
+        }
+
+        if(existRecord) {
+          this.recordService.setRecordsDoc(existRecord);
+        }
+        else {
+          console.log(this.currentUser);
+          this.recordService.addRecordDoc({
+            docRefId: null,
+            game: 'piedra-papel-tijera',
+            points: 10,
+            username: this.currentUser.email
+          });
+        }
+      } 
+
     }
   }
 

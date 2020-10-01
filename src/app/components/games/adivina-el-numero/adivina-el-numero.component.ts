@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IRecord } from 'src/app/models/record';
+import { IUser } from 'src/app/models/user';
+import { RecordsService } from 'src/app/services/records.service';
 import { JuegoAdivina } from '../../../classes/juego-adivina';
 
 @Component({
@@ -9,15 +12,21 @@ import { JuegoAdivina } from '../../../classes/juego-adivina';
 export class AdivinaElNumeroComponent implements OnInit {
   @Output() enviarJuego: EventEmitter<any> = new EventEmitter<any>();
 
+  private errorMessage: string;
+  private currentUser:IUser;
+  private records:IRecord[];
+
   nuevoJuego: JuegoAdivina;
   Mensajes: string;
   contador: number;
   ocultarVerificar: boolean;
 
-  constructor() {
+  constructor(private recordService: RecordsService) {
     this.nuevoJuego = new JuegoAdivina();
     console.info("numero Secreto:", this.nuevoJuego.numeroSecreto);
     this.ocultarVerificar = false;
+    this.currentUser = JSON.parse(localStorage.getItem('usuario'));
+
   }
   generarnumero() {
     this.nuevoJuego.generarnumero();
@@ -36,6 +45,32 @@ export class AdivinaElNumeroComponent implements OnInit {
       this.MostarMensaje("Sos un Genio!!!", true);
       this.nuevoJuego.numeroSecreto = 0;
 
+      alert('Felicitaciones te ganaste!!!');
+
+      if(this.currentUser) {
+
+        let existRecord: IRecord = null;
+
+        for(let i = 0; i<this.records.length; i++) {
+          if(this.records[i].username === this.currentUser.email && this.records[i].game === "adivina-el-numero") {
+            this.records[i].points += 10;
+            existRecord = this.records[i];
+          }
+        }
+
+        if(!existRecord) {
+          this.recordService.setRecordsDoc(existRecord);
+        }
+        else {
+          console.log(this.currentUser);
+          this.recordService.addRecordDoc({
+            docRefId: null,
+            game: 'adivina-el-numero',
+            points: 10,
+            username: this.currentUser.email
+          });
+        }
+      } 
     } else {
 
       let mensaje: string;
@@ -87,6 +122,18 @@ export class AdivinaElNumeroComponent implements OnInit {
 
   }
   ngOnInit() {
+
+    this.currentUser = JSON.parse(localStorage.getItem('usuario'));
+
+    console.log(this.currentUser);
+
+    this.recordService.getRecordsObservable().subscribe({
+
+      next: records => {
+        this.records = records;
+      },
+      error: err => this.errorMessage = err
+    });
   }
 
 }

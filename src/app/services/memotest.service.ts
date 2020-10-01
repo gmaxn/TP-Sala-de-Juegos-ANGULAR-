@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
-import { IWord } from './../models/dictionary';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { ICard } from './../models/card';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class DictionaryService {
+export class MemotestService {
 
-  private dictionaryUrl: string = 'api/dictionary.json';
+  private cardUrl: string = 'api/memotest.json';
 
   constructor(private http: HttpClient) { }
 
-  getDictionary() {
 
-    return this.http.get<IWord[]>(this.dictionaryUrl).pipe(
+  getCards() {
+    return this.http.get<ICard[]>(this.cardUrl).pipe(
       tap(data => console.log('All: ' + JSON.stringify(data))),
       catchError(this.handleError)
     );

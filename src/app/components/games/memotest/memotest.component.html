@@ -1,0 +1,78 @@
+<style>
+    .timer {
+        border: 1px solid black;
+    }
+</style>
+<div id="memotest-wrapper">
+
+    <div id="timer"><div>{{min}}:{{sec}}</div></div>
+
+    <div class="positioner" *ngIf='shuffledSet && shuffledSet.length'>
+
+        <div class="cards" *ngFor='let card of shuffledSet'>
+            <img [src]="card.imageUrl" alt="card.name" name={{card.index}} (click)="onClickedCard($event)"  disabled="true">
+        </div>
+
+        <!-- <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div>
+
+        <div class="cards">
+            <img src="./../../assets/images/octopuss.jpg" alt="card" name="octopuss">
+        </div> -->
+
+    </div>
+    <input id="new-game" type="button" value="Nuevo Juego" class="btn btn-primary" (click)="onNewGame()">
+
+</div>

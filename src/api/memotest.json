@@ -1,0 +1,66 @@
+[
+  {
+    "name": "html",
+    "imageUrl": ["./../../assets/images/html.jpg"]
+  },
+  {
+    "name": "css",
+    "imageUrl": ["./../../assets/images/css.jpg"]
+  },
+  {
+    "name": "js",
+    "imageUrl": ["./../../assets/images/js.jpg"]
+  },
+  {
+    "name": "jquery",
+    "imageUrl": ["./../../assets/images/jquery.jpg"]
+  },
+  {
+    "name": "php",
+    "imageUrl": ["./../../assets/images/php.jpg"]
+  },
+  {
+    "name": "bootstrap",
+    "imageUrl": ["./../../assets/images/bootstrap.jpg"]
+  },
+  {
+    "name": "angualr",
+    "imageUrl": ["./../../assets/images/angular.jpg"]
+  },
+  {
+    "name": "ts",
+    "imageUrl": ["./../../assets/images/ts.jpg"]
+  },
+  {
+    "name": "html",
+    "imageUrl": ["./../../assets/images/html.jpg"]
+  },
+  {
+    "name": "css",
+    "imageUrl": ["./../../assets/images/css.jpg"]
+  },
+  {
+    "name": "js",
+    "imageUrl": ["./../../assets/images/js.jpg"]
+  },
+  {
+    "name": "jquery",
+    "imageUrl": ["./../../assets/images/jquery.jpg"]
+  },
+  {
+    "name": "php",
+    "imageUrl": ["./../../assets/images/php.jpg"]
+  },
+  {
+    "name": "bootstrap",
+    "imageUrl": ["./../../assets/images/bootstrap.jpg"]
+  },
+  {
+    "name": "angualr",
+    "imageUrl": ["./../../assets/images/angular.jpg"]
+  },
+  {
+    "name": "ts",
+    "imageUrl": ["./../../assets/images/ts.jpg"]
+  }
+]

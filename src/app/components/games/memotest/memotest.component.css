@@ -1,0 +1,64 @@
+#memotest-wrapper {
+  border: 1px solid white;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cards {
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: white;
+  display: inline-flex;
+  margin: 5px;
+}
+
+.cards:hover {
+  transform: translate(-5px, -5px);
+}
+
+.cards > img {
+  border: 1px solid white;
+  border-radius: 6px;
+  width: 125px;
+  height: 125px;
+}
+
+p {
+  margin: auto;
+  font-size: 200px;
+  position: absolute;
+  z-index: 1;
+  color: rgba(255, 0, 0, 0.5);
+  vertical-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+}
+
+.positioner {
+  /* border: 1px solid black; */
+  padding: 5px;
+  height: 568px;
+  width: 568px;
+}
+
+#timer {
+    border: 2px solid rgb(228,225,220);
+    background-color: black;
+    color: rgb(228,225,220);
+    width:118.75px;
+    height: 38px;
+    text-align: center;
+    vertical-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: consolas;
+    font-size: xx-large;
+    border-radius: 5px;
+}

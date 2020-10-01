@@ -1,0 +1,37 @@
+<div id="component-wrapper">
+
+    <div id="person-grid-wrapper" class="show-margins">
+
+        <!-- <div class="layout" id="search-bar">
+            <input type="text" name="" id="search" placeholder='Filter by. . .'>
+
+            <button >
+                Show Image
+            </button>
+
+        </div> -->
+
+        <div class="layout" id="table-wrapper">
+
+            <table *ngIf='records && records.length'>
+
+                <thead>
+                    <th>Email</th>
+                    <th>Game</th>
+                    <th>Points</th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor='let record of records'>
+                        <td>{{ record.username }}</td>
+                        <td>{{ record.game }}</td>
+                        <td>{{ record.points }}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+</div>

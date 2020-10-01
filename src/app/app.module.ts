@@ -29,6 +29,8 @@ import { ErrorComponent } from './components/panels/error/error.component';
 import { RegisterComponent } from './components/panels/register/register.component';
 import { WelcomeComponent } from './components/panels/welcome/welcome.component';
 import { ContactsComponent } from './components/panels/contacts/contacts.component';
+import { MemotestComponent } from './components/games/memotest/memotest.component';
+import { RecordsComponent } from './components/panels/records/records.component';
 
 
 
@@ -50,7 +52,9 @@ import { ContactsComponent } from './components/panels/contacts/contacts.compone
     ErrorComponent,
     RegisterComponent,
     WelcomeComponent,
-    ContactsComponent
+    ContactsComponent,
+    MemotestComponent,
+    RecordsComponent
   ],
   imports: [
     BrowserModule,

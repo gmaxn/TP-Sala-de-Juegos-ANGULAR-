@@ -112,4 +112,9 @@ export class LoginComponent implements OnInit {
     //this.logeando=true;
   }
 
+  onAutoComplete(): void {
+    this.usuario = 'guest@user.com';
+    this.clave = '123456';
+  }
+
 }

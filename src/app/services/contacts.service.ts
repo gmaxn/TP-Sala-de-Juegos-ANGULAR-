@@ -14,7 +14,23 @@ export class ContactsService {
   dblist: AngularFirestoreCollection<IContact>;
 
   constructor(private firestore: AngularFirestore) {
-    this.dblist = this.firestore.collection<IContact>('registro-usuarios');
+    this.dblist = this.firestore.collection('registro-usuarios');
+  }
+
+  getContactDoc(): IContact[] {
+    let arr: IContact[];
+    this.dblist.get().toPromise().then((snapshot) => {
+      snapshot.docs.forEach(doc => {
+          arr.push({
+            docRef: doc.ref,
+            firstname: doc.data().firstname,
+            lastname: doc.data().lastname,
+            age: doc.data().age,
+            email: doc.data().email
+          });     
+        });
+    });
+    return arr;
   }
 
 
